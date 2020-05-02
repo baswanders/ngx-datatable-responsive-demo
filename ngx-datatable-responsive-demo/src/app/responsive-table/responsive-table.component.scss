@@ -1,0 +1,86 @@
+
+
+:host {
+    display: block;
+    height: 100%;
+}
+
+::ng-deep {
+    .ngx-datatable {
+        .datatable-header {
+            background-color: #d9c3ef;
+            border-bottom: solid 2px #c18cc8;
+        }
+
+        .datatable-footer {
+            background-color: #d9c3ef;
+        }
+
+        
+        .datatable-footer {
+            .datatable-footer-inner, .datatable-footer-inner.selected-count {
+                .page-count, .selected-count .page-count {
+                    background-color: lightgoldenrodyellow;
+                    flex-basis: auto;
+                }
+        
+                .datatable-pager {
+                    background-color: lightcyan;
+                    flex-basis: auto;
+
+                    .pager {
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+
+                        .pages{
+                            padding: 0 4px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+
+
+}
+
+.main {
+    h1 {
+        background-color: #903de3;
+        color:white;
+        padding: 6px;
+        margin-bottom: 0;
+    }
+
+    .table-wrapper {
+        background-color: #daead8;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+    ::ng-deep {
+         .ngx-datatable .datatable-footer .datatable-pager .pager .pages {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .mobile-hidden {
+      display: none;
+    }
+}
+
+
+
+/* Inline #6 | http://localhost:4200/one */
+
+
+  
