@@ -16,6 +16,7 @@ This project is using Angular Material, so it should look congruent with the Mat
 
 ## Full-height app
 The project uses full application height/width with flex-box.
+To achieve this, check the styles.scss file which contains classes for flex-box styling, full-height and show scrollbar.
 
 
 
