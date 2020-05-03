@@ -16,26 +16,28 @@
                 totalMessage: 'records',
                 selectedMessage: 'selected'
               }"
-            (tableContextmenu)="onTableContextMenu($event)"
             [selected]="selected"
             [selectionType]="'checkbox'"
+            (tableContextmenu)="onTableContextMenu($event)"
+            (activate)="onActivate($event)"
+            (select)="onSelect($event)"
             >
 
-            <ngx-datatable-column
-            [width]="30"
-            [sortable]="false"
-            [canAutoResize]="false"
-            [draggable]="false"
-            [resizeable]="false"
-            [headerCheckboxable]="true"
-            [checkboxable]="true"
+          <!-- Checkbox column -->
+          <ngx-datatable-column
+              [width]="30"
+              [sortable]="false"
+              [canAutoResize]="false"
+              [draggable]="false"
+              [resizeable]="false"
+              [headerCheckboxable]="true"
+              [checkboxable]="true"
           ></ngx-datatable-column>
 
-          <ngx-datatable-column name="Name" minWidth="100"  ></ngx-datatable-column>
+          <ngx-datatable-column name="Name" minWidth="100"></ngx-datatable-column>
           <ngx-datatable-column name="Gender"></ngx-datatable-column>
           <ngx-datatable-column name="City" prop="address.city"></ngx-datatable-column>
           
         </ngx-datatable>
     </div>
-
 </div>

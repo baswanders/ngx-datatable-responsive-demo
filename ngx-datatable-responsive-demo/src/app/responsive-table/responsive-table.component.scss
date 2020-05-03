@@ -1,10 +1,26 @@
-
-
+// :host is used to style the component itself.
 :host {
     display: block;
     height: 100%;
 }
 
+// We put colors on elements to see them visually well.
+.main {
+    h1 {
+        background-color: #903de3;
+        color:white;
+        padding: 6px;
+        margin-bottom: 0;
+    }
+
+    .table-wrapper {
+        background-color: #daead8;
+    }
+}
+
+// For the styling of the ngx-datatable, we need to 
+// use ng-deep to disable the view-encapsulation. 
+// We could also put this code in the styles.scss file to have it globally available.
 ::ng-deep {
     .ngx-datatable {
         .datatable-header {
@@ -14,10 +30,8 @@
 
         .datatable-footer {
             background-color: #d9c3ef;
-        }
+            padding: 0 4px;
 
-        
-        .datatable-footer {
             .datatable-footer-inner, .datatable-footer-inner.selected-count {
                 .page-count, .selected-count .page-count {
                     background-color: lightgoldenrodyellow;
@@ -44,43 +58,14 @@
         }
 
     } 
-
-
 }
 
-.main {
-    h1 {
-        background-color: #903de3;
-        color:white;
-        padding: 6px;
-        margin-bottom: 0;
-    }
-
-    .table-wrapper {
-        background-color: #daead8;
-    }
-
-    
-}
-
+// If the screen is smaller than 600px, the pages (numbers) are hidden.
 @media screen and (max-width: 600px) {
+    // we need ng-deep again to style the ngx-datatable.
     ::ng-deep {
          .ngx-datatable .datatable-footer .datatable-pager .pager .pages {
             display: none;
         }
     }
 }
-
-
-@media screen and (max-width: 600px) {
-    .mobile-hidden {
-      display: none;
-    }
-}
-
-
-
-/* Inline #6 | http://localhost:4200/one */
-
-
-  

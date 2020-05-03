@@ -36,8 +36,9 @@ export class ResponsiveTableComponent implements OnInit {
     req.send();
   }
 
+  // Context menu handling
   onTableContextMenu(contextMenuEvent) {
-    console.log(contextMenuEvent);
+    console.log('Table Context Menu: ', contextMenuEvent);
 
     this.rawEvent = contextMenuEvent.event;
     if (contextMenuEvent.type === 'body') {
@@ -50,6 +51,14 @@ export class ResponsiveTableComponent implements OnInit {
 
     contextMenuEvent.event.preventDefault();
     contextMenuEvent.event.stopPropagation();
+  }
+
+  onActivate(event) {
+    console.log('Activate event: ', event);
+  }
+
+  onSelect(event) {
+    console.log('Select event: ', event);
   }
 
 }
