@@ -1,7 +1,7 @@
 <div class="main full-height flex-container flex-column">
     <h1>NGX-datatable Responsive demo</h1>
     
-    <div class="table-wrapper flex-grow flex-container">
+    <div class="table-wrapper flex-grow flex-container" >
         <ngx-datatable 
             class="flex-grow"
             [rows]="rows" 
@@ -21,6 +21,7 @@
             (tableContextmenu)="onTableContextMenu($event)"
             (activate)="onActivate($event)"
             (select)="onSelect($event)"
+            (keydown)="onKeyDown($event)"
             >
 
           <!-- Checkbox column -->
@@ -39,5 +40,16 @@
           <ngx-datatable-column name="City" prop="address.city"></ngx-datatable-column>
           
         </ngx-datatable>
+    </div>
+    <div class="selection scrollbar-auto">
+      <h4>
+        Selections <small>({{ selected?.length }})</small>
+      </h4>
+      <ul>
+        <li *ngFor="let sel of selected">
+          {{ sel.name }}
+        </li>
+        <li *ngIf="!selected?.length">No Selections</li>
+      </ul>
     </div>
 </div>

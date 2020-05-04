@@ -15,6 +15,7 @@
 
     .table-wrapper {
         background-color: #daead8;
+        min-height: 200px;
     }
 }
 
@@ -27,6 +28,17 @@
             background-color: #d9c3ef;
             border-bottom: solid 2px #c18cc8;
         }
+
+        .datatable-body-row:hover {
+                background-color: #eee;
+            }
+        .datatable-body-row:focus {
+                background-color: palegreen;
+            }
+        
+            
+        
+
 
         .datatable-footer {
             background-color: #d9c3ef;
