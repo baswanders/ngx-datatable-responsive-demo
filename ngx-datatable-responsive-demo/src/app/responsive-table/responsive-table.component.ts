@@ -59,6 +59,17 @@ export class ResponsiveTableComponent implements OnInit {
 
   onSelect(event) {
     console.log('Select event: ', event);
+    this.selected.splice(0, this.selected.length);
+    this.selected.push(...event.selected);
+    console.log('Selection: ', this.selected);
+
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    });
+  }
+
+  onKeyDown(event) {
+    console.log('key down event: ', event);
   }
 
 }
